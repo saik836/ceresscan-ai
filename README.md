@@ -1,16 +1,176 @@
-# React + Vite
+🌾 CeresScan AI
+AI-Based Grain Identification System
+CeresScan AI is a React-based Machine Learning web application designed to help farmers identify grain types using image analysis and image processing techniques.
+The application allows users to:
+Capture grain images using a mobile camera
+Upload grain images from a device
+Analyze image quality
+Identify grain categories
+Store scan history
+Use the application as a Progressive Web App (PWA)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+📷 Camera Capture
+Mobile camera support
+Rear camera access
+Live preview
+Grain image capture
+📁 Image Upload
+JPG support
+PNG support
+WEBP support
+Drag-and-drop upload
+🔍 Image Quality Analysis
+The system evaluates:
+Brightness
+Contrast
+Sharpness
+Quality Levels:
+High
+Medium
+Low
+🌾 Grain Classification
+Currently Supported Grains:
+Basmati Rice
+Wheat
+Corn
+Barley
+Quinoa
+❌ Non-Grain Detection
+The application rejects images that do not appear to be grains.
+Examples:
+Mobile Phones
+Human Faces
+Cars
+Trees
+Random Objects
+📜 Scan History
+Stores:
+Grain Name
+Confidence Score
+Timestamp
+Grade Information
+using browser localStorage.
+📱 Progressive Web App (PWA)
+Supports:
+Install on phone
+Offline access
+Home-screen shortcut
+Fast loading
 
-Currently, two official plugins are available:
+🧠 Machine Learning Algorithm
+Feature-Based Decision Tree Style Classification
+The project uses a rule-based machine learning approach inspired by Decision Tree algorithms.
+Extracted Features
+The system extracts:
+Brightness
+RGB Color Values
+Contrast
+Saturation
+Texture
+Classification Process
+Image ↓ Feature Extraction ↓ Brightness Contrast Texture Saturation RGB ↓ Grain Validation ↓ Decision Rule Matching ↓ Grain Prediction ↓ Confidence Score
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🛠️ Technologies Used
+Frontend
+React.js
+Vite
+React Router DOM
+Image Processing
+HTML5 Canvas API
+Storage
+localStorage
+Deployment
+GitHub
+Vercel
+Mobile Support
+Progressive Web App (PWA)
 
-## React Compiler
+📂 Project Structure
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── CameraCapture.jsx
+│   ├── UploadImage.jsx
+│   ├── ImageQuality.jsx
+│   ├── ScanResult.jsx
+│   └── LanguageSelector.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Scanner.jsx
+│   ├── History.jsx
+│   └── Settings.jsx
+│
+├── services/
+│   ├── classifier.js
+│   ├── trainedModel.js
+│   ├── modelService.js
+│   ├── imageProcessor.js
+│   └── storageService.js
+│
+├── hooks/
+│   └── useCamera.js
+│
+├── data/
+│   └── grains.js
+│
+├── App.jsx
+├── App.css
+├── main.jsx
+└── index.css
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚙️ Installation
+Clone the repository:
+git clone https://github.com/saik836/ceresscan-ai.git
+Move into project folder:
+cd ceresscan-ai
+Install dependencies:
+npm install
+Run development server:
+npm run dev
+Open:
+http://localhost:5173
 
-## Expanding the ESLint configuration
+🌐 Deployment
+GitHub Repository
+Repository:
+https://github.com/saik836/ceresscan-ai
+Vercel Deployment
+Deploy using:
+vercel
+or import the GitHub repository into Vercel Dashboard.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📈 Future Enhancements
+TensorFlow.js Integration
+MobileNetV2 CNN Model
+Real Grain Dataset Training
+Multi-Language Support
+Market Price Prediction
+Disease Detection
+Cloud Database Integration
+
+⚠️ Current Limitations
+Rule-based classification
+Limited grain categories
+Accuracy depends on image quality
+Less accurate than deep learning models
+
+🔮 Future ML Upgrade
+Current Algorithm:
+Feature-Based Decision Tree Classification
+Future Upgrade:
+TensorFlow.js + MobileNetV2 CNN
+Expected Accuracy:
+85% – 95%
+with a properly trained grain dataset.
+
+👨‍💻 Developer
+Project: CeresScan AI
+Domain:
+Artificial Intelligence
+Machine Learning
+Computer Vision
+Agricultural Technology
+Developed for educational and research purposes.
